@@ -1,0 +1,196 @@
+### VSCode REST Client Extension - API Test Suite
+### Base URL Configuration
+@baseUrl = http://localhost:3000
+
+### 1. Users Endpoint - Get All Users
+GET {{baseUrl}}/users
+Content-Type: application/json
+
+###
+
+### 2. Stats Endpoint - Get User Statistics
+GET {{baseUrl}}/stats
+Content-Type: application/json
+
+###
+
+### 3. Process Data Endpoint - Heavy Data Processing
+GET {{baseUrl}}/process-data
+Content-Type: application/json
+
+###
+
+### 4. External Data Endpoint - Fetch External APIs
+GET {{baseUrl}}/external-data
+Content-Type: application/json
+
+###
+
+### 5. Performance Testing - Multiple User Requests
+# Test caching mechanism with multiple requests
+GET {{baseUrl}}/users
+Content-Type: application/json
+
+###
+
+GET {{baseUrl}}/users
+Content-Type: application/json
+
+###
+
+GET {{baseUrl}}/users
+Content-Type: application/json
+
+###
+
+### 6. Stats Performance Testing
+# Test stats caching with multiple requests
+GET {{baseUrl}}/stats
+Content-Type: application/json
+
+###
+
+GET {{baseUrl}}/stats
+Content-Type: application/json
+
+###
+
+### 7. Error Handling Test - Invalid Endpoint
+GET {{baseUrl}}/invalid-endpoint
+Content-Type: application/json
+
+###
+
+### 8. Response Headers Test
+GET {{baseUrl}}/users
+Content-Type: application/json
+Accept: application/json
+
+###
+
+### 9. Custom Headers Test
+GET {{baseUrl}}/users
+Content-Type: application/json
+User-Agent: VSCode-REST-Client/1.0
+X-Request-ID: test-12345
+
+###
+
+### 10. Load Testing Simulation
+# Multiple rapid requests to test server stability
+GET {{baseUrl}}/users
+Content-Type: application/json
+
+###
+
+GET {{baseUrl}}/stats
+Content-Type: application/json
+
+###
+
+GET {{baseUrl}}/process-data
+Content-Type: application/json
+
+###
+
+### 11. Data Processing Performance Test
+# Test the heavy data processing endpoint
+GET {{baseUrl}}/process-data
+Content-Type: application/json
+
+###
+
+### 12. External API Integration Test
+# Test external API calls
+GET {{baseUrl}}/external-data
+Content-Type: application/json
+
+###
+
+### 13. Cache Invalidation Test
+# Test cache behavior by waiting and making requests
+GET {{baseUrl}}/users
+Content-Type: application/json
+
+###
+
+# Wait for cache to expire (60 seconds TTL)
+# Then test again
+GET {{baseUrl}}/users
+Content-Type: application/json
+
+###
+
+### 14. Stats Cache Invalidation Test
+GET {{baseUrl}}/stats
+Content-Type: application/json
+
+###
+
+# Wait for cache to expire
+GET {{baseUrl}}/stats
+Content-Type: application/json
+
+###
+
+### 15. Error Scenarios Test
+# Test various error conditions
+GET {{baseUrl}}/nonexistent
+Content-Type: application/json
+
+###
+
+GET {{baseUrl}}/users/invalid
+Content-Type: application/json
+
+###
+
+### 16. Content Type Validation Test
+GET {{baseUrl}}/users
+Accept: application/json
+Content-Type: application/json
+
+###
+
+### 17. Response Time Test
+# Test response time for performance monitoring
+GET {{baseUrl}}/users
+Content-Type: application/json
+
+###
+
+### 18. Memory Usage Test
+# Test memory-intensive operations
+GET {{baseUrl}}/process-data
+Content-Type: application/json
+
+###
+
+### 19. Network Integration Test
+# Test external API integration
+GET {{baseUrl}}/external-data
+Content-Type: application/json
+
+###
+
+### 20. Comprehensive API Test Suite
+# Test all available endpoints
+GET {{baseUrl}}/users
+Content-Type: application/json
+
+###
+
+GET {{baseUrl}}/stats
+Content-Type: application/json
+
+###
+
+GET {{baseUrl}}/process-data
+Content-Type: application/json
+
+###
+
+GET {{baseUrl}}/external-data
+Content-Type: application/json
+
+###
